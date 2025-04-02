@@ -26,18 +26,8 @@ for (int i = 0; i < 100; i++)
 //retrieve customers
 foreach (Customer customer in customerRepository.GetCustomers())
 {
-    Console.WriteLine($"UserId: {customer.UserId}");
-    Console.WriteLine($"Name: {customer.Name}");
-    Console.WriteLine($"Email: {customer.Email}");
-    Console.WriteLine($"DOB: {customer.DOB}");
-    Console.WriteLine($"Password: {customer.Password}");
-    Console.WriteLine($"Address: {customer.Address}");
-    Console.WriteLine($"City: {customer.City}");
-    Console.WriteLine($"State: {customer.State}");
-    Console.WriteLine($"ZipCode: {customer.ZipCode}");
-    Console.WriteLine($"PhoneNumber: {customer.PhoneNumber}");
-    Console.WriteLine($"IsActive: {customer.IsActive}");
-    Console.WriteLine();
+    Console.WriteLine(customer);
+      
 }
 
 

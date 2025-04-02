@@ -17,3 +17,4 @@ D:\siemenscsharpapr2025\shoppersden\bin\Debug\net9.0\Faker.Net.6.0.dll
 D:\siemenscsharpapr2025\shoppersden\bin\Debug\net9.0\de-DE\Faker.Net.6.0.resources.dll
 D:\siemenscsharpapr2025\shoppersden\obj\Debug\net9.0\shoppersden.csproj.AssemblyReference.cache
 D:\siemenscsharpapr2025\shoppersden\obj\Debug\net9.0\shoppers.C7C5BACE.Up2Date
+D:\siemenscsharpapr2025\shoppersden\obj\Debug\net9.0\shoppersden.sourcelink.json

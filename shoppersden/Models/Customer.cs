@@ -41,5 +41,9 @@ namespace shoppersden.Models
         public string PhoneNumber { get; set; }
         public bool IsActive { get; set; }
 
+        public override string ToString()
+        {
+            return UserId + " " + Name + " " + Email + " " + DOB + " " + Password + " " + Address + " " + City + " " + State + " " + ZipCode + " " + PhoneNumber + " " + IsActive;
+        }
     }
 }
