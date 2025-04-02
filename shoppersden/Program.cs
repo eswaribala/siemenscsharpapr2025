@@ -2,8 +2,32 @@
 //Console.WriteLine("Hello, World!");
 
 using shoppersden.Models;
+using shoppersden.Repositories;
+//generate 100 customers
+CustomerRepository customerRepository = new CustomerRepository();
 
-Customer customer = new Customer(); 
+for (int i = 0; i < 100; i++)
+{
+    Customer customer = new Customer(Faker.RandomNumber.Next(1000, 5000),
+        Faker.Name.FullName(), 
+        Faker.Internet.Email(),
+        Faker.Identification.DateOfBirth(),
+        Faker.Identification.UkPassportNumber(),
+        Faker.Address.StreetAddress(),
+        Faker.Address.City(),
+        Faker.Address.UsMilitaryState(),
+        Faker.Address.ZipCode(),
+        Faker.Phone.Number(),
+        Faker.Boolean.Random()
+        );
+    
+}
+
+
+
+
+
+
 
 //create customer object
 /*
