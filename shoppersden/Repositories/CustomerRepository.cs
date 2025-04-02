@@ -31,5 +31,12 @@ namespace shoppersden.Repositories
             return customers;
         }
 
+        public Gender getRandomGender()
+        {
+          var genderValues=  Enum.GetValues(typeof(Gender));
+           return (Gender)genderValues.GetValue(new Random().Next((genderValues.Length)));
+
+        }
+
     }
 }
