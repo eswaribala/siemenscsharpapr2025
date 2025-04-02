@@ -14,6 +14,12 @@ namespace shoppersden.Models
         public Customer()
         {
         }
+
+        public Customer(Product products)
+        {
+            Product = products;
+        }
+
         //parameterized constructor
 
         public Customer(long userId, string name, string email, DateTime dOB, string password, string address, string city, string state, string zipCode, string phoneNumber, bool isActive, Gender gender)
@@ -44,6 +50,7 @@ namespace shoppersden.Models
         public string PhoneNumber { get; set; }
         public bool IsActive { get; set; }
         public Gender Gender { get; set; }
+        public Product Product{ get; set; }
 
         public override string ToString()
         {

@@ -19,6 +19,8 @@ namespace shoppersden.Repositories
             customers = new Customer[100];
         }
 
+        
+
         public void AddCustomer(Customer customer)
         {
             //initalizing array

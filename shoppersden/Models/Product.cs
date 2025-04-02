@@ -15,5 +15,10 @@ namespace shoppersden.Models
         public int Quantity { get; set; }
         public DateTime DOP { get; set; }
         public string ImageUrl { get; set; }
+
+        public override string ToString()
+        {
+            return ProductId+ " " + Name + " " + Description + " " + Price + " " + Quantity + " " + DOP + " " + ImageUrl;
+        }
     }
 }

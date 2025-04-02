@@ -1,8 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
+using shoppersden;
 
+JaggedArray.EntryPoint();
+JaggedArray.ShowJaggedArray();
+
+/*
 using shoppersden.Models;
 using shoppersden.Repositories;
+using Bogus;
+using System.Net.Http.Headers;
 //generate 100 customers
 CustomerRepository customerRepository = new CustomerRepository();
 
@@ -31,7 +38,7 @@ foreach (Customer customer in customerRepository.GetCustomers())
       
 }
 
-
+*/
 
 
 
