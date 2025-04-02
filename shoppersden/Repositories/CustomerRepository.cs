@@ -1,0 +1,35 @@
+﻿using shoppersden.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace shoppersden.Repositories
+{
+    class CustomerRepository
+    {
+        //declaring array
+        private Customer[] customers;
+        private static int i = 0;
+
+        public CustomerRepository()
+        {
+            //define array size
+            customers = new Customer[100];
+        }
+
+        public void AddCustomer(Customer customer)
+        {
+            //initalizing array
+            customers[i] = customer;
+            i++;
+        }
+
+        public Customer[] GetCustomers()
+        {
+            return customers;
+        }
+
+    }
+}
