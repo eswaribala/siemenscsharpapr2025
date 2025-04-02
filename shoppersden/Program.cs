@@ -18,7 +18,8 @@ for (int i = 0; i < 100; i++)
         Faker.Address.UsMilitaryState(),
         Faker.Address.ZipCode(),
         Faker.Phone.Number(),
-        Faker.Boolean.Random()
+        Faker.Boolean.Random(),
+        customerRepository.getRandomGender()
         );
     customerRepository.AddCustomer(customer);
 }

@@ -47,7 +47,7 @@ namespace shoppersden.Models
 
         public override string ToString()
         {
-            return UserId + " " + Name + " " + Email + " " + DOB + " " + Password + " " + Address + " " + City + " " + State + " " + ZipCode + " " + PhoneNumber + " " + IsActive;
+            return UserId + " " + Name + " " + Email + " " + DOB + " " + Password + " " + Address + " " + City + " " + State + " " + ZipCode + " " + PhoneNumber + " " + IsActive+""+Gender;
         }
     }
 }
