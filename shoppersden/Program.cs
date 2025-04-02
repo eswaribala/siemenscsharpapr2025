@@ -1,6 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
 
+using shoppersden.Models;
+
+Customer customer = new Customer(); 
+
 //create customer object
 /*
 using shoppersden.Models;
