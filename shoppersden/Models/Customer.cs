@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace shoppersden.Models
 {
+    enum Gender { MALE,FEMALE,TRANSGENDER}
+
     class Customer
     {
         //default constructor
@@ -14,7 +16,7 @@ namespace shoppersden.Models
         }
         //parameterized constructor
 
-        public Customer(long userId, string name, string email, DateTime dOB, string password, string address, string city, string state, string zipCode, string phoneNumber, bool isActive)
+        public Customer(long userId, string name, string email, DateTime dOB, string password, string address, string city, string state, string zipCode, string phoneNumber, bool isActive, Gender gender)
         {
             UserId = userId;
             Name = name;
@@ -27,6 +29,7 @@ namespace shoppersden.Models
             ZipCode = zipCode;
             PhoneNumber = phoneNumber;
             IsActive = isActive;
+            Gender = gender;
         }
 
         public long UserId { get; set; }
@@ -40,6 +43,7 @@ namespace shoppersden.Models
         public string ZipCode { get; set; }
         public string PhoneNumber { get; set; }
         public bool IsActive { get; set; }
+        public Gender Gender { get; set; }
 
         public override string ToString()
         {
