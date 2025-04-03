@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
 using shoppersden;
+using shoppersden.Models;
+using shoppersden.Repositories;
 
 namespace shoppersden
 {
@@ -8,7 +10,33 @@ namespace shoppersden
     {
        public static void Main(string[] args)
         {
-            Console.WriteLine("Testing....");
+            CustomerRepository customerRepository = new CustomerRepository();
+
+            for (int i = 0; i < 10; i++)
+            {
+                Customer customer = new Customer(Faker.RandomNumber.Next(1000, 5000),
+                    Faker.Name.FullName(),
+                    Faker.Internet.Email(),
+                    Faker.Identification.DateOfBirth(),
+                    Faker.Identification.UkPassportNumber(),
+                    Faker.Address.StreetAddress(),
+                    Faker.Address.City(),
+                    Faker.Address.UsMilitaryState(),
+                    Faker.Address.ZipCode(),
+                    Faker.Phone.Number(),
+                    Faker.Boolean.Random(),
+                    customerRepository.getRandomGender()
+                    );
+                customerRepository.AddCustomer(customer);
+            }
+
+            Customer[] customers = customerRepository.GetCustomers();
+
+            Array.Sort(customers);
+            customers.ToList()
+                .ForEach(customer => Console.WriteLine(customer.DOB));
+
+
         }
     }
 }
