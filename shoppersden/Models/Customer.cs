@@ -8,7 +8,8 @@ namespace shoppersden.Models
 {
     enum Gender { MALE,FEMALE,TRANSGENDER}
     //customer object sort
-    class Customer:IComparable<Customer>
+    class Customer
+        //:IComparable<Customer>
     {
         //default constructor
         public Customer()
@@ -52,11 +53,12 @@ namespace shoppersden.Models
         public Gender Gender { get; set; }
         public Product Product{ get; set; }
 
+        /*
         public int CompareTo(Customer other)
         {
 
             return this.DOB.CompareTo(other.DOB);
-        }
+        }*/
 
         public override string ToString()
         {

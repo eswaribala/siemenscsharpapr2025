@@ -32,9 +32,9 @@ namespace shoppersden
 
             Customer[] customers = customerRepository.GetCustomers();
 
-            Array.Sort(customers);
+            Array.Sort(customers,new CustomerSorter());
             customers.ToList()
-                .ForEach(customer => Console.WriteLine(customer.DOB));
+                .ForEach(customer => Console.WriteLine(customer.Name));
 
 
         }
