@@ -8,12 +8,17 @@ namespace shoppersden.Models
 {
     class Admin:Person
     {
-        public Admin(string name, string password,string adminId) : base(name, password)
+        public Admin(string name, string adminId) : base(name)
         {
             AdminID = adminId;
         }
 
         public string AdminID { get; set; }
+
+        public override string GeneratePassword()
+        {
+            return "A-"+Faker.Identification.MedicareBeneficiaryIdentifier();
+        }
 
         public override string ToString()
         {

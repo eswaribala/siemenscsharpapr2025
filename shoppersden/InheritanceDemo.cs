@@ -12,8 +12,8 @@ namespace shoppersden
         static void Main(string[] args)
         {
             Admin admin = new Admin(Faker.Name.FullName(),
-                Faker.Identification.UkNhsNumber(),
-                Convert.ToString(Faker.RandomNumber.Next(10000,1000000)));  
+                Convert.ToString(Faker.RandomNumber.Next(10000,1000000)));
+            admin.Password= admin.GeneratePassword();
 
             Console.WriteLine(admin);
 
@@ -28,11 +28,11 @@ namespace shoppersden
             }
 
             //as operator
-            Person person = admin;
+            Person person = admin; //implicit
             Console.WriteLine(person);
 
-            Person person1=new Person(Faker.Name.FullName(), Faker.Identification.UkNhsNumber());
-            Admin admin1 = person1;
+            //Person person1=new Person(Faker.Name.FullName(), Faker.Identification.UkNhsNumber());
+            //Admin admin1 = person1 as Admin; //explicit
 
         }
     }

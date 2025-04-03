@@ -8,12 +8,18 @@ namespace shoppersden.Models
 {
     class Consumer:Person
     {
-        public Consumer(string name, string password,string phoneNo) : base(name, password)
+        public Consumer(string name, string phoneNo) : base(name)
         {
             PhoneNo = phoneNo;
         }
 
         public string PhoneNo { get; set; }
+
+        public override string GeneratePassword()
+        {
+            return "C-"+Faker.Identification.MedicareBeneficiaryIdentifier();
+
+        }
 
         public override string ToString()
         {
