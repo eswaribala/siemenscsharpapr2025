@@ -8,6 +8,9 @@ namespace ShoppersDenv1.Models
 {
     //immutability
     //value type
+    //no inheritance
+    //faster retrieval
+    //thread safety
     readonly struct Money
     {
         public int Notes { get; }

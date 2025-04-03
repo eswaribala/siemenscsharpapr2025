@@ -11,12 +11,13 @@ namespace ShoppersDenv1
             var commerce = new Bogus.DataSets.Commerce();
             var date=new Bogus.DataSets.Date();
 
-            Product product = new Product();
+            Product product = new Product(new Money(Faker.RandomNumber.Next(100, 10000),
+               Faker.RandomNumber.Next(100, 10000)));
             product.Id = Faker.RandomNumber.Next(10000, 100000);
             product.Name = commerce.Product();
-            product.Description=commerce.ProductDescription();
-            product.Price = new Money(Faker.RandomNumber.Next(100, 10000),
-               Faker.RandomNumber.Next(100, 10000));
+            product.Description = new Description(commerce.ProductAdjective(),
+                commerce.ProductMaterial(),
+                commerce.ProductDescription());          
             product.Quantity= Faker.RandomNumber.Next(1, 100);
             Console.WriteLine($"Product={product}");
 
