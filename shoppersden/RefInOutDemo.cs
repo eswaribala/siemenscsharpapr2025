@@ -65,9 +65,17 @@ namespace shoppersden
 
         static string SearchData(ref Customer[] customers, long UserId)
         {
+            
             //LINQ
-           return  customers.ToList().Find(Customer => Customer.UserId == UserId).PhoneNumber;
+            
+            Customer customer=customers.ToList().Find(Customer => Customer.UserId == UserId);
 
+            if (customer != null)
+            {
+                return customer.PhoneNumber;
+            }
+            else
+                return null;
         }
 
         static void ModifyValue(ref int value)
