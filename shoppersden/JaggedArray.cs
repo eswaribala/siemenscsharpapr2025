@@ -4,10 +4,11 @@ using Bogus;
 using shoppersden.Repositories;
 namespace shoppersden
 {
-    class JaggedArray
+    public class JaggedArray
     {
+        //jagged array no of columns are dynamic
        static Customer[][] customerJaggedArray = new Customer[3][];
-        public static void EntryPoint() {
+        public static void Main(string[] args) {
             
             var commerce = new Bogus.DataSets.Commerce("en");
             var date = new Bogus.DataSets.Date();
@@ -15,10 +16,8 @@ namespace shoppersden
 
             for(int i = 0; i < customerJaggedArray.Length; i++)
             {
-                customerJaggedArray[i] = new Customer[new Random().Next(1,10)];          
+                customerJaggedArray[i] = new Customer[new Random().Next(1,10)];      
               
-
-
                 for (int j = 0;j < customerJaggedArray[i].Length; j++)
                 {
                     Product product = new Product();
@@ -33,6 +32,7 @@ namespace shoppersden
                     customerJaggedArray[i][j] = customer;
                 }
             }
+            ShowJaggedArray();
 
         }
 

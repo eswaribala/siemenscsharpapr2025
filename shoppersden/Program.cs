@@ -2,8 +2,19 @@
 //Console.WriteLine("Hello, World!");
 using shoppersden;
 
-JaggedArray.EntryPoint();
-JaggedArray.ShowJaggedArray();
+namespace shoppersden
+{
+   public class Program
+    {
+       public static void Main(string[] args)
+        {
+            Console.WriteLine("Testing....");
+        }
+    }
+}
+
+//JaggedArray.EntryPoint();
+//JaggedArray.ShowJaggedArray();
 
 /*
 using shoppersden.Models;
