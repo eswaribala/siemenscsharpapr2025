@@ -8,7 +8,7 @@ namespace ShoppersDenv1.Models
 {
     interface ISoftDeletable
     {
-        bool IsDeleted();
-        bool SoftDelete();
+        bool IsDeleted(Guid id);
+        bool SoftDelete(Guid id);
     }
 }
