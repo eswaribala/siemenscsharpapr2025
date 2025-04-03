@@ -48,14 +48,26 @@ namespace shoppersden
             else
                 Console.WriteLine("UserId not found");
 
+            int value = 10;
+            Console.WriteLine("Value before modify: " + value);
+            ModifyValue(ref value);
+            Console.WriteLine("Value after modify: " + value);
+
         }
 
 
         static string SearchData(ref Customer[] customers, long UserId)
         {
             //LINQ
-           return  customers.ToList().Find(C => C.UserId == UserId).PhoneNumber;
+           return  customers.ToList().Find(Customer => Customer.UserId == UserId).PhoneNumber;
 
+        }
+
+        static void ModifyValue(ref int value)
+        {
+           
+            value= value * new Random().Next(2,1000);
+           
         }
 
     }
