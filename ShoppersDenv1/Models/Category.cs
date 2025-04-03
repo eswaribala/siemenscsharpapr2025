@@ -17,12 +17,9 @@ namespace ShoppersDenv1.Models
 
         public Guid Id { get; set; }
 
-        public bool IsDeleted(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+        public bool IsDeleted { get; set; }
 
-        public bool SoftDelete(Guid id)
+        public bool SoftDelete()
         {
             throw new NotImplementedException();
         }
