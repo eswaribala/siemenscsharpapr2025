@@ -16,7 +16,7 @@ namespace shoppersden.Repositories
         public CustomerRepository()
         {
             //define array size
-            customers = new Customer[100];
+            customers = new Customer[10];
         }
 
         
