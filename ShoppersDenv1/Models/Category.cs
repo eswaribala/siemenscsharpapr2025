@@ -19,9 +19,10 @@ namespace ShoppersDenv1.Models
 
         public bool IsDeleted { get; set; }
 
-        public bool SoftDelete()
+        public void SoftDelete()
         {
-            throw new NotImplementedException();
+            IsDeleted = true;
+            UpdatedAt = DateTime.Now;
         }
     }
 }
