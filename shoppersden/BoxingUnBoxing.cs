@@ -20,6 +20,7 @@ namespace shoppersden
             object ProductCode2 = ProductId;
             Console.WriteLine("ProductCode: " + ProductCode1);
             Console.WriteLine("ProductCode: " + ProductCode2);
+            //object address compared
             if (ProductCode1 == ProductCode2)
             {
                 Console.WriteLine("ProductCode1 and ProductCode2 are equal");
@@ -31,6 +32,14 @@ namespace shoppersden
             
             //UnBoxing
             long ProductId1 = (long)ProductCode1;
+            if(ProductId == ProductId1)
+            {
+                Console.WriteLine("ProductId and ProductId1 are equal");
+            }
+            else
+            {
+                Console.WriteLine("ProductId and ProductId1 are not equal");
+            }
 
         }
     }
