@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShoppersDenv1.Models
 {
-    interface IEntity
+   interface IEntity
     {
         Guid Id { get; }
     }

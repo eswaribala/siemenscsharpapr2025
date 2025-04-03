@@ -1,4 +1,5 @@
-﻿using ShoppersDenv1.Models;
+﻿using ShoppersDenv1.Exceptions;
+using ShoppersDenv1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,17 +14,26 @@ namespace ShoppersDenv1
         {
             var commerce = new Bogus.DataSets.Commerce();
             Category category = new Category();
-            category.CategoryId = Faker.RandomNumber.Next(1000, 100000);
-            category.Name = commerce.Department();
+            try
+            {
+                category.SetName("Homes235435");
+            }
+            catch (NameFormatException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+           
             category.CreatedAt = DateTime.Now;
+            //generates new guid
             category.Id = Guid.NewGuid();
+            
             if (category.IsDeleted)
             {
                 Console.WriteLine("Category is deleted");
             }
             else
             {
-                Console.WriteLine($"Category Id: {category.Id}");
+                Console.WriteLine($"Category Id: {category.Id}, Name:{category.GetName()}");
                 category.SoftDelete();
 
 
