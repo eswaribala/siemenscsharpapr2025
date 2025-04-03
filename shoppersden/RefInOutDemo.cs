@@ -53,6 +53,13 @@ namespace shoppersden
             ModifyValue(ref value);
             Console.WriteLine("Value after modify: " + value);
 
+            ShowValue(in value);    
+
+            string Email="", PhoneNo="";
+
+            SearchEmailPhoneNo(ref customersArray, UserId, out Email, out PhoneNo);
+
+            Console.WriteLine($"Email: {Email}, PhoneNo: {PhoneNo}");
         }
 
 
@@ -68,6 +75,30 @@ namespace shoppersden
            
             value= value * new Random().Next(2,1000);
            
+        }
+
+        static void ShowValue(in int value)
+        {
+           // value = value * new Random().Next(2, 1000); // This will cause a compile-time error
+            Console.WriteLine("Value: " + value);
+        }
+
+
+        static void SearchEmailPhoneNo(ref Customer[] customers, long UserId, out string Email, out string PhoneNo)
+        {
+            //LINQ
+            Customer result=customers.ToList().Find(Customer => Customer.UserId == UserId);
+
+            if (result != null)
+            {
+                Email = result.Email;
+                PhoneNo = result.PhoneNumber;
+            }
+            else
+            {
+                Email = null;
+                PhoneNo = null;
+            }
         }
 
     }
