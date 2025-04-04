@@ -31,9 +31,9 @@ namespace ShoppersDenV3
             while (enumerator.MoveNext())
             {
                 if (bool.Parse(enumerator.Current.ToString()) == true)
-                    Console.WriteLine("Message Enququed");
+                    Console.WriteLine("Message Enqued");
                 else
-                    Console.WriteLine("Message Deququed");
+                    Console.WriteLine("Message Dequed");
             }
         }
     }
