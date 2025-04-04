@@ -29,5 +29,7 @@ namespace ShoppersDenV3.Models
         {
             return Id + " " + Name + " " + Description + " " + Price.Notes + "." + Price.Coins + " " + Quantity;
         }
+
+       
     }
 }

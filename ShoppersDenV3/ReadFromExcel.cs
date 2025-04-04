@@ -35,6 +35,7 @@ namespace ShoppersDenV3
                         if (row != null)
                         {
                             ht.Add(row.GetCell(1).ToString(), row.GetCell(2).ToString());
+                            
                             /*
                             for (int j = 0; j < row.LastCellNum; j++)
                             {

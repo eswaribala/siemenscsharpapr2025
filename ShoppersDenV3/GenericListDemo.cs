@@ -1,5 +1,6 @@
 ﻿
 
+using Microsoft.VisualBasic;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using ShoppersDenV3.Models;
@@ -41,8 +42,13 @@ namespace ShoppersDenV3
                 ISheet sheet = workbook.CreateSheet("Products-Data");
 
                 int rowIndex = 0;
+                List<Product> ProductList = productRepository
+                    .GetAllProducts().ToList();
+                //sorting
 
-                foreach (var product in productRepository.GetAllProducts())
+                ProductList.Sort(new ProductSorter());
+
+                foreach (var product in ProductList)
                 {
                     Console.WriteLine($"Product={product}");
                     IRow row = sheet.CreateRow(rowIndex);
@@ -52,7 +58,8 @@ namespace ShoppersDenV3
                     row.CreateCell(3).SetCellValue(product.Description.Specificaion);
                     row.CreateCell(4).SetCellValue(product.Description.Summary);
                     row.CreateCell(5).SetCellValue(product.Quantity);
-                    row.CreateCell(6).SetCellValue(product.Price.ToString());
+                    row.CreateCell(6).SetCellValue(product.Price.Notes.ToString());
+                    row.CreateCell(7).SetCellValue(product.Price.Coins.ToString());
                     rowIndex++;
 
                 }
