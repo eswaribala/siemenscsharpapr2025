@@ -13,7 +13,7 @@ namespace ShoppersDenV3
         {
             Queue<Message> messages = new Queue<Message>();
             Message message = null;
-            for (int i = 0; i < Faker.RandomNumber.Next(1, 50); i++)
+            for (int i = 0; i < 10; i++)
             {
                 message = new Message();
                 message.MessageId = Faker.RandomNumber.Next(1, 100);
@@ -22,13 +22,19 @@ namespace ShoppersDenV3
                 message.Content = Faker.Lorem.Sentence();
                 message.TimeStamp=DateTime.Now;
                 messages.Enqueue(message);
+                BitArrayDemo.AddQueueState(i, true);
 
             }
 
+            int count = 0;
             while(messages.Count > 0)
             {
+                count = messages.Count;
                 Console.WriteLine(messages.Dequeue());
+                BitArrayDemo.AddQueueState(count+10, false);
             }
+
+            BitArrayDemo.PrintQueueState();
         }
     }
 }
