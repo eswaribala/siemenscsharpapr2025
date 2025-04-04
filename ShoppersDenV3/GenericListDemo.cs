@@ -46,7 +46,11 @@ namespace ShoppersDenV3
                     .GetAllProducts().ToList();
                 //sorting
 
-                ProductList.Sort(new ProductSorter());
+                //ProductList.Sort(new ProductSorter());
+
+                //LINQ
+                ProductList=ProductList.ToList()
+                    .OrderBy(p => p.Quantity).ToList();  
 
                 foreach (var product in ProductList)
                 {
