@@ -7,7 +7,7 @@
     <Nullable>disable</Nullable>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\shoppersden</DockerfileContext>
-    <StartupObject>ShoppersDenV3.StackDemo</StartupObject>
+    <StartupObject>ShoppersDenV3.QueueDemo</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
