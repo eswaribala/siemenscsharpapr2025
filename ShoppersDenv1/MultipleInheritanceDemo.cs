@@ -16,7 +16,7 @@ namespace ShoppersDenv1
             Category category = new Category();
             try
             {
-                category.SetName("Homes235435");
+                category.SetName(commerce.Department());
             }
             catch (NameFormatException ex)
             {

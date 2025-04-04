@@ -14,6 +14,7 @@ namespace ShoppersDenv1.Models
 
         public void SetName(string name)
         {
+            Console.WriteLine(name);
             string Pattern = @"^[a-zA-Z]{5,25}$";
             Regex regex = new Regex(Pattern);
             if (!regex.IsMatch(name))
