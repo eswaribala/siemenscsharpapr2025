@@ -2,6 +2,7 @@
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,8 @@ namespace ShoppersDenV3
         static void Main(string[] args)
         {
             var fileName = "ProductsApr2025.xlsx";
+            Hashtable ht = new Hashtable();
+
             IWorkbook workbook = null;
             try
             {
@@ -24,8 +27,6 @@ namespace ShoppersDenV3
                     else if (fileName.IndexOf(".xls") > 0)
                         workbook = new HSSFWorkbook(fs);
 
-
-
                     ISheet sheet = workbook.GetSheetAt(0);
                     int rowCount = sheet.LastRowNum;
                     for (int i = 0; i <= rowCount; i++)
@@ -33,11 +34,14 @@ namespace ShoppersDenV3
                         IRow row = sheet.GetRow(i);
                         if (row != null)
                         {
+                            ht.Add(row.GetCell(1).ToString(), row.GetCell(2).ToString());
+                            /*
                             for (int j = 0; j < row.LastCellNum; j++)
                             {
                                 Console.Write(row.GetCell(j).ToString() + "\t");
                             }
-                            Console.WriteLine();
+                            */
+                            //Console.WriteLine();
                         }
                     }
                 }
@@ -47,6 +51,16 @@ namespace ShoppersDenV3
             catch (Exception ex)
             {
             }
+            ReadFromHT(ht);
         }
+
+        static void ReadFromHT(Hashtable ht)
+        {
+            foreach (DictionaryEntry de in ht)
+            {
+                Console.WriteLine($"Key={de.Key} Value={de.Value}");
+            }
+        }
+
     }
 }
