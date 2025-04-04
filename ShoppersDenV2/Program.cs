@@ -9,6 +9,7 @@ namespace ShoppersDenV2
         {
             OTPGenerator otpGenerator = new OTPGenerator();
             Console.WriteLine($"Generated OTP={otpGenerator.GenerateOTP(1000, 9999)}");
+            
         }
     }
 }

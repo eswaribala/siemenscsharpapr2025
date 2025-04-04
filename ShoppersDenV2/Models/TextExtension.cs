@@ -5,13 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ShoppersDenV2.Models
-{/*
-    class OTPGeneratorDerived: OTPGenerator
+{
+    static class TextExtension
     {
-        public int GenerateOTP(int min, int max)
+        public static string[] SplitText(this string text)
         {
-            return Faker.RandomNumber.Next(min, max)*10000;
+            return text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
-    */
 }
