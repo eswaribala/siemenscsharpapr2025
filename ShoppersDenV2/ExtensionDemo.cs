@@ -15,7 +15,7 @@ namespace ShoppersDenV2
            string input = "South Korea’s Constitutional Court removed impeached President Yoon Suk Yeol from office on Friday (April 4, 2025), four months after he threw South Korean politics into turmoil by declaring martial law and sending troops to parliament in an ill-fated effort to break through legislative gridlock.";
            input.SplitText().ToList().ForEach(W => Console.WriteLine(W));
 
-            Order order = new Order();
+            SeasonalOrder order = new SeasonalOrder();
             order.OrderId = Faker.RandomNumber.Next(1,10000000);
             order.OrderAmount = Faker.RandomNumber.Next(100, 10000000);
             order.OrderDate = new Bogus.DataSets.Date().Past();
