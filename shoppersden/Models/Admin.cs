@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden.Models
 {
-    class Admin:Person
+   public class Admin:Person
     {
         public Admin(string name, string adminId) : base(name)
         {

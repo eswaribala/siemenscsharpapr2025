@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "shoppersden": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

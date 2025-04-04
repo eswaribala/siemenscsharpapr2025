@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShoppersDenV2.Models
 {
-    static class GenericExtension
+   public static class GenericExtension
     {
         public static string[] SplitText(this string text)
         {

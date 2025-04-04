@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden
 {
-    class BoxingUnBoxing
+   public class BoxingUnBoxing
     {
         static void Main(string[] args)
         {

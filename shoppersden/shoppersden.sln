@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppersDenv1", "..\Shopper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppersDenV2", "..\ShoppersDenV2\ShoppersDenV2.csproj", "{25B29373-A620-4921-9865-114069F87846}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppersDenV3", "..\ShoppersDenV3\ShoppersDenV3.csproj", "{9E0538DE-C45C-4930-A495-7F2CEC6031BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{25B29373-A620-4921-9865-114069F87846}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25B29373-A620-4921-9865-114069F87846}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25B29373-A620-4921-9865-114069F87846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0538DE-C45C-4930-A495-7F2CEC6031BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0538DE-C45C-4930-A495-7F2CEC6031BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0538DE-C45C-4930-A495-7F2CEC6031BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0538DE-C45C-4930-A495-7F2CEC6031BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

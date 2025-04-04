@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden
 {
-    class RefInOutDemo
+   public class RefInOutDemo
     {
         public static void Main(string[] args)
         {

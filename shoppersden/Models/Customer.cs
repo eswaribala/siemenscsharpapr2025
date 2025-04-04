@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace shoppersden.Models
 {
-    enum Gender { MALE,FEMALE,TRANSGENDER}
+    public enum Gender { MALE,FEMALE,TRANSGENDER}
     //customer object sort
-    class Customer
+    public class Customer
         //:IComparable<Customer>
     {
         //default constructor

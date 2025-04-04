@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden.Models
 {
-    abstract class Person
+    public abstract class Person
     {
         protected string Name { get; set; }
         public string Password { get; set; }

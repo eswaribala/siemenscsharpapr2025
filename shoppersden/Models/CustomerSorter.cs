@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden.Models
 {
-    class CustomerSorter : IComparer<Customer>
+   public class CustomerSorter : IComparer<Customer>
     {
         public int Compare(Customer x, Customer y)
         {

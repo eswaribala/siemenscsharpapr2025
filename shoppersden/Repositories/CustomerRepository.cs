@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden.Repositories
 {
-    class CustomerRepository
+   public class CustomerRepository
     {
         //declaring array
         private Customer[] customers;

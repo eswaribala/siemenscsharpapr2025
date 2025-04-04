@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden.Models
 {
-    class Product
+   public class Product
     {
         
 

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\shoppersden</DockerfileContext>
+    <StartupObject>ShoppersDenV3.NonGenericArrayList</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="35.6.2" />
+    <PackageReference Include="Faker.Net" Version="2.0.163" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ShoppersDenV2">
+      <HintPath>..\ShoppersDenV2\bin\Debug\net8.0\ShoppersDenV2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

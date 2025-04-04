@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden.Models
 {
-    class Consumer:Person
+  public  class Consumer:Person
     {
         public Consumer(string name, string phoneNo) : base(name)
         {

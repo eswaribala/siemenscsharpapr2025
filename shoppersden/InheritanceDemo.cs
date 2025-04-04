@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace shoppersden
 {
-    class InheritanceDemo
+   public class InheritanceDemo
     {
         static void Main(string[] args)
         {

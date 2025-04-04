@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShoppersDenV2.Models
 {
-    class Order
+    public class Order
     {
         public long OrderId { get; set; }
         public long OrderAmount { get; set; }
