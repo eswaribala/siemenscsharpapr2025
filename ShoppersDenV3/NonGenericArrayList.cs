@@ -12,7 +12,7 @@ namespace ShoppersDenV3
     {
         static void Main(string[] args)
         {
-            ArrayList list = new ArrayList();
+            IList list = new ArrayList();
             list.Add("Parameswari");
             list.Add(560000);
             list.Add(158.5F);
@@ -25,6 +25,10 @@ namespace ShoppersDenV3
             {
                 Console.WriteLine(enumerator.Current);
             }
+
+           
+            
+
         }
     }
 }
