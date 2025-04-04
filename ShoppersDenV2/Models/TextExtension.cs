@@ -10,6 +10,8 @@ namespace ShoppersDenV2.Models
     {
         public static string[] SplitText(this string text)
         {
+            if (string.IsNullOrWhiteSpace(text)) return Array.Empty<string>();
+
             return text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
