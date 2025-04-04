@@ -20,3 +20,14 @@ D:\siemenscsharpapr2025\ShoppersDenV3\obj\Debug\net8.0\refint\ShoppersDenV3.dll
 D:\siemenscsharpapr2025\ShoppersDenV3\obj\Debug\net8.0\ShoppersDenV3.pdb
 D:\siemenscsharpapr2025\ShoppersDenV3\obj\Debug\net8.0\ShoppersDenV3.genruntimeconfig.cache
 D:\siemenscsharpapr2025\ShoppersDenV3\obj\Debug\net8.0\ref\ShoppersDenV3.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\ICSharpCode.SharpZipLib.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\NPOI.OOXML.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\NPOI.OpenXml4Net.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\NPOI.OpenXmlFormats.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\NPOI.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\NOTICE.TXT
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\Microsoft.Win32.SystemEvents.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\siemenscsharpapr2025\ShoppersDenV3\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll

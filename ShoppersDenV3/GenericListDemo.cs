@@ -1,7 +1,12 @@
-﻿using ShoppersDenV3.Models;
+﻿
+
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
+using ShoppersDenV3.Models;
 using ShoppersDenV3.Repositories;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,10 +34,31 @@ namespace ShoppersDenV3
 
             Console.WriteLine($"No of Products{productRepository.GetAllProducts().Count()}");
 
-            foreach (var product in productRepository.GetAllProducts())
+       
+            using (var fs = new FileStream("ProductsApr2025.xlsx", FileMode.Create, FileAccess.Write))
             {
-                Console.WriteLine($"Product={product}");
+                IWorkbook workbook = new XSSFWorkbook();
+                ISheet sheet = workbook.CreateSheet("Products-Data");
+
+                int rowIndex = 0;
+
+                foreach (var product in productRepository.GetAllProducts())
+                {
+                    Console.WriteLine($"Product={product}");
+                    IRow row = sheet.CreateRow(rowIndex);
+                    row.CreateCell(0).SetCellValue(product.Id);
+                    row.CreateCell(1).SetCellValue(product.Name);
+                    row.CreateCell(2).SetCellValue(product.Description.Title);
+                    row.CreateCell(3).SetCellValue(product.Description.Specificaion);
+                    row.CreateCell(4).SetCellValue(product.Description.Summary);
+                    row.CreateCell(5).SetCellValue(product.Quantity);
+                    row.CreateCell(6).SetCellValue(product.Price.ToString());
+                    rowIndex++;
+
+                }
+                workbook.Write(fs);
             }
+              
 
         }
     }

@@ -12,11 +12,14 @@ namespace ShoppersDenV3
     {
         static void Main(string[] args)
         {
+            int number = 100;
+            object data = number;
             IList list = new ArrayList();
             list.Add("Parameswari");
             list.Add(560000);
             list.Add(158.5F);
             list.Add(true);
+            list.Add(data);
             list.Add('A');
             list.Add(new Order());
             IEnumerator enumerator = list.GetEnumerator();
